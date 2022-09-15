@@ -14,7 +14,6 @@ const incomeSchema = new mongoose.Schema(
       type: String,
       required: [true, "Required field"],
     },
-    required: [true, "Required field"],
   },
   {
     timestamps: true,

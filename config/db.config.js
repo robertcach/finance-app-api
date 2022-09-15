@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const DB_NAME = "flat-101-frontend-developer-api";
-const URI = process.env.MONGO_URL || "mongodb://127.0.0.1:27017";
-const DB_URI = `${URI}`;
+const DB_NAME = "finance-app-api";
+const URI = "mongodb://127.0.0.1:27017";
+const DB_URI = `${URI}/${DB_NAME}`;
 
 mongoose
   .connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
