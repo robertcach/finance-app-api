@@ -15,6 +15,7 @@ router.delete("/income/:id", incomesController.delete);
 /* EXPENSES */
 router.post("/expense/new", expensesController.create);
 router.get("/expense/:id", expensesController.detail);
+router.get("/expenses", expensesController.list);
 router.patch("/expense/:id", expensesController.update);
 router.delete("/expense/:id", expensesController.delete);
 

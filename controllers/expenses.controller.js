@@ -14,6 +14,12 @@ module.exports.detail = (req, res, next) => {
     .catch(next);
 };
 
+module.exports.list = (req, res, next) => {
+  Expense.find()
+    .then((expenses) => res.status(200).json(expenses))
+    .catch(next);
+};
+
 module.exports.update = (req, res, next) => {
   Expense.findByIdAndUpdate(req.params.id, req.body, { new: true })
     .then((updatedExpense) => res.status(200).json(updatedExpense))
